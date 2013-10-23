@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+JIGSAW_PATH=/home/rholman/jigsaw/src/jigsaw/client.php
+
+php $JIGSAW_PATH

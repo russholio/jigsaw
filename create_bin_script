@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+BIN_FILE=jigsaw
+BIN_PATH=bin
+
+INSTALL_PATH=`pwd`
+if [ -n "$1" ]; then
+    INSTALL_PATH=$1
+fi
+
+INSTALL_PATH=${INSTALL_PATH/%\//}
+
+CLIENT_PATH=`find . -name 'client.php'`
+CLIENT_PATH=${CLIENT_PATH:2}
+
+mkdir -p bin
+
+cat > $BIN_PATH/$BIN_FILE <<EOF
+#!/usr/bin/env bash
+JIGSAW_PATH=$INSTALL_PATH/$CLIENT_PATH
+
+php \$JIGSAW_PATH
+EOF
+
+chmod 744 $BIN_PATH/$BIN_FILE

@@ -1,0 +1,48 @@
+{
+    "name": "devco/jigsaw",
+    "description": "A workflow manager, to handle the queueing of jobs and the passing of required parameters",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Russell Holman",
+            "email": "russholio@gmail.com",
+            "role": "Lead Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "jigsaw\\": "src/"
+        }
+    },
+
+    "repositories": [
+        {
+            "type":"vcs",
+            "url": "/home/rholman/sputnik-job-description"
+        }
+    ],
+
+    "repositories_old": [
+        {
+            "type":"package",
+            "package": {
+                "name": "devco/sputnik-job-description",
+                "version": "0.1.0",
+                "source": {
+                    "type": "git",
+                    "url":"/home/rholman/sputnik-job-description",
+                    "reference": "master"
+                }
+            }
+        }
+    ],
+
+    "require":{
+        "e2ex/e2ex": "0.8.*@dev",
+        "devco/sputnik-job-description":"dev-master",
+        "devco/model":"@dev"
+    }
+}
